@@ -1,0 +1,4 @@
+.metadata/
+.sonarlint/
+.project
+.classpath
