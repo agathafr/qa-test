@@ -23,14 +23,9 @@ public class TryingToAddQuestionsWithoutLogginIn {
 
 	@When("I click the Add New Questions button")
 	public void clickTheAddNewQuestionsButton() {
-		// WebDriverWait wait = new WebDriverWait(driver, 10);
-		// wait.until(ExpectedConditions.presenceOfElementLocated(By.linkText(" Add New
-		// Questions")));
 		WebElement addNewQuestionsButton = driver.findElement(By.xpath(
-				"//body[@id='page-top']/nav[@class='navbar navbar-default']/div[@class='container-fluid']/div[@class='collapse navbar-collapse']/ul[@class='nav navbar-nav navbar-right']/li/a[@href='https://opentdb.com/trivia_add_question.php']"));
-		// wait.until(ExpectedConditions.visibilityOf(addNewQuestionsButton));
+				"//a[text()=' Add New Questions']"));
 		addNewQuestionsButton.click();
-		// Assert.assertEquals(" Add New Questions", addNewQuestionsButton.getText());
 	}
 
 	@Then("I display error message with the text {string}.")

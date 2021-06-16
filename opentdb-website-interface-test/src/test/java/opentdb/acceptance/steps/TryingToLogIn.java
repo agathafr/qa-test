@@ -15,7 +15,9 @@ public class TryingToLogIn {
 
 	@Given("that I navigate to the login page of the question bank")
 	public void navigateToTheLoginPage() {
-		driver.navigate().to("https://opentdb.com/login.php");
+		driver.navigate().to("https://opentdb.com/");
+		WebElement loginButton = driver.findElement(By.xpath("//a[@href='https://opentdb.com/login.php']"));
+		loginButton.click();
 		Assert.assertEquals("https://opentdb.com/login.php", driver.getCurrentUrl());
 	}
 

@@ -18,7 +18,9 @@ public class SearchingInAQuestionBank {
 	
 	@Given("that I navigate to the search page of the question bank")
 	public void navigateToTheSearchPageOfTheQuestionBank() {
-		driver.navigate().to("https://opentdb.com/browse.php");
+		driver.navigate().to("https://opentdb.com/");
+		WebElement browse = driver.findElement(By.xpath("//a[@class='btn btn-primary']"));
+		browse.click();
 		Assert.assertEquals("https://opentdb.com/browse.php", driver.getCurrentUrl());
 	}
 
